@@ -87,7 +87,7 @@
   let currentPDPProduct = null;
 
   // Feature flag: checkout button variant test
-  const checkoutVariant = posthog.getFeatureFlag('checkout-button-color');
+  const checkoutVariant = posthog.getFeatureFlag('show-express-checkout-button');
   const checkoutBtn = document.getElementById('checkout-btn');
   if (checkoutVariant === 'test') {
     checkoutBtn.style.backgroundColor = '#2563eb';

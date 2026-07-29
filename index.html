@@ -87,12 +87,14 @@
   let currentPDPProduct = null;
 
   // Feature flag: checkout button variant test
+ posthog.onFeatureFlags(function() {
   const checkoutVariant = posthog.getFeatureFlag('show-express-checkout-button');
   const checkoutBtn = document.getElementById('checkout-btn');
   if (checkoutVariant === 'test') {
     checkoutBtn.style.backgroundColor = '#2563eb';
     checkoutBtn.textContent = 'Buy Now';
   }
+});
 
   function showProductDetail(productEl) {
     currentPDPProduct = productEl;
